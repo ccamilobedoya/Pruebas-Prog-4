@@ -23,9 +23,12 @@
   "homepage": "https://github.com/ccamilobedoya/Pruebas-Prog-4",
   "dependencies": {
     "async": "^2.5.0",
+    "clone": "^2.1.1",
+    "csv-array": "0.0.22",
     "csv-parse": "^1.2.2",
     "express": "^4.15.4",
     "formidable": "^1.1.1",
+    "mathjs": "^3.16.3",
     "pug": "^2.0.0-rc.3",
     "textract": "^2.1.2"
   },

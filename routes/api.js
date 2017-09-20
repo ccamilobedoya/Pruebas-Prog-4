@@ -10,6 +10,7 @@ var fileManager = require('../utils/fileManager');
 var csvManager = require('../utils/csvManager');
 var router = express.Router();
 
+
 // Se ejecuta siempre que se accede a la ruta /loc/api
 // No le importa ni el metodo ni el resto de la url
 router.use(function(req, res, next) {
@@ -27,21 +28,19 @@ router.post('/upload', function(req, res) {
       res.render('ErrorPage', {error: err});
     } else {
       //console.log(results);
-      fileManager.extractTextFromFiles(results, function(err, texts){
+      csvManager.getArrayDataFromMultipleCsvFiles(results, function(err, completeArray){
         if (err) {
           res.render('ErrorPage', {error: err});
         } else {
-          csvManager.csvDataToArray(texts[0], function(err, csvArray){
+          csvManager.getArrayOfComputableDataFromMultipleArrayData(completeArray, function(err, computableArray){
             if (err) {
               res.render('ErrorPage', {error: err});
             } else {
-              console.log(csvArray);
+              console.log(computableArray);
             }
           });
-
-
         }
-      })
+      });
     }
   });
 });
