@@ -7,7 +7,7 @@
 
 var express = require('express');
 var fileManager = require('../utils/fileManager');
-//var countingLOC = require('../LOC/countingLOC');
+var csvManager = require('../utils/csvManager');
 var router = express.Router();
 
 // Se ejecuta siempre que se accede a la ruta /loc/api
@@ -31,7 +31,13 @@ router.post('/upload', function(req, res) {
         if (err) {
           res.render('ErrorPage', {error: err});
         } else {
-
+          csvManager.csvDataToArray(texts[0], function(err, csvArray){
+            if (err) {
+              res.render('ErrorPage', {error: err});
+            } else {
+              console.log(csvArray);
+            }
+          });
 
 
         }

@@ -1,7 +1,7 @@
 {
-  "name": "Pruebas-Prog-2",
+  "name": "Pruebas-Prog-4",
   "version": "0.0.0",
-  "description": "Programa para contar el numero de lineas de codigo",
+  "description": "Relative Size",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,18 +12,18 @@
     "url": "https://github.com/ccamilobedoya/Pruebas-Prog-2-LOC.git"
   },
   "keywords": [
-    "code",
-    "count",
-    "LOC"
+    "size",
+    "relative"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ccamilobedoya/Pruebas-Prog-2-LOC/issues"
+    "url": "https://github.com/ccamilobedoya/Pruebas-Prog-4/issues"
   },
-  "homepage": "https://github.com/ccamilobedoya/Pruebas-Prog-2-LOC",
+  "homepage": "https://github.com/ccamilobedoya/Pruebas-Prog-4",
   "dependencies": {
     "async": "^2.5.0",
+    "csv-parse": "^1.2.2",
     "express": "^4.15.4",
     "formidable": "^1.1.1",
     "pug": "^2.0.0-rc.3",

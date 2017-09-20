@@ -18,7 +18,7 @@ function saveFiles(req, results) {
   var form = new formidable.IncomingForm();
 
   form.encoding = 'utf-8';
-  form.uploadDir = './LOC/temp';
+  form.uploadDir = './RS/temp';
   form.multiples = true;
   form.keepExtensions = true;
 
