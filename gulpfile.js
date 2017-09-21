@@ -25,7 +25,7 @@ gulp.task('server', function() {
 gulp.task('default', function() {
   gulp.run('server')
 
-  gulp.watch(['./index.js', './routes/*.*', './LOC/*.*', './public/*/*.*', './views/*.*'], function() {
+  gulp.watch(['./index.js', './routes/*.*', './RS/*.*', './public/*/*.*', './views/*.*'], function() {
     gulp.run('server')
   })
 
