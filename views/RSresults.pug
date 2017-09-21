@@ -1,0 +1,25 @@
+html
+  head
+    title Conteo de Lineas de Codigo
+    link(rel='stylesheet', href='/static/CSS/style.css')
+  body
+    h2(class='fuente') Tamaños Relativos
+    .flex-container
+      table(class='heavyTable')
+        tr 
+          th Name
+          th VS
+          th S
+          th M
+          th L
+          th VL
+        //- Itera sobre el vector con la informacion
+        each size, index in sizes
+          tr
+            //- #{} Se usa para tomar el valor especifico
+            td #{files[index].name}
+            td #{size.vs} 
+            td #{size.s} 
+            td #{size.m} 
+            td #{size.l} 
+            td #{size.vl} 

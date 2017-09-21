@@ -41,7 +41,7 @@ router.post('/upload', function(req, res) {
                 if (err) {
                   res.render('ErrorPage', {error: err});
                 } else {
-                  console.log(sizes);
+                  res.render('RSresults', {sizes: sizes, files: results});
                 }
               });
             }

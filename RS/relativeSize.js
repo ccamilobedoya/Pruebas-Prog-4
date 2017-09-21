@@ -40,11 +40,11 @@ function calculateRelativeSize (computableArray, cb) {
           if (!err) {
             variance = sum2 / (dividedArray.length -1);
             stdDev = math.sqrt(variance);
-            results.vs = math.exp(avg - (2 * stdDev));
-            results.s = math.exp(avg - stdDev);
-            results.m = math.exp(avg);
-            results.l = math.exp(avg + stdDev);
-            results.vl = math.exp(avg + (2 * stdDev));
+            results.vs = math.format(math.exp(avg - (2 * stdDev)), {notation: 'fixed', precision: 4});
+            results.s = math.format(math.exp(avg - stdDev), {notation: 'fixed', precision: 4});
+            results.m = math.format(math.exp(avg), {notation: 'fixed', precision: 4});
+            results.l = math.format(math.exp(avg + stdDev), {notation: 'fixed', precision: 4});
+            results.vl = math.format(math.exp(avg + (2 * stdDev)), {notation: 'fixed', precision: 4});
             cb(null, results);
           } else {
             cb('Error hallando la varianza');

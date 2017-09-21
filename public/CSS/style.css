@@ -128,3 +128,71 @@ form button:hover{
 form button:active{
   border:0;
 }
+
+
+/* De https://codepen.io/victordarras/pen/hJHAm */
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: 1px solid #fff;
+  margin: 50px auto;
+  background: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+th {
+  background: rgb(228, 98, 98);
+  height: 54px;
+  width: 25%;
+  font-weight: lighter;
+  text-shadow: 0 1px 0 rgb(226, 90, 90);
+  color: white;
+  border: 1px solid rgb(221, 86, 86);
+  box-shadow: inset 0px 1px 2px rgb(217, 83, 83);
+  transition: all 0.2s;
+}
+tr {
+  border-bottom: 1px solid #cccccc;
+}
+tr:last-child {
+  border-bottom: 0px;
+}
+td {
+  border-right: 1px solid #cccccc;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.2s;
+}
+td:last-child {
+  border-right: 0px;
+}
+td.selected {
+  background: #d7e4ef;
+  z-index: ;
+}
+td input {
+  font-size: 14px;
+  background: none;
+  outline: none;
+  border: 0;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+}
+td input:focus {
+  box-shadow: 0 1px 0 steelblue;
+  color: steelblue;
+}
+::-moz-selection {
+  background: steelblue;
+  color: white;
+}
+::selection {
+  background: steelblue;
+  color: white;
+}
+.heavyTable {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: float 5s infinite;
+}
