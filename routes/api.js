@@ -8,6 +8,7 @@
 var express = require('express');
 var fileManager = require('../utils/fileManager');
 var csvManager = require('../utils/csvManager');
+var relativeSize = require('../RS/relativeSize');
 var router = express.Router();
 
 
@@ -36,7 +37,7 @@ router.post('/upload', function(req, res) {
             if (err) {
               res.render('ErrorPage', {error: err});
             } else {
-              console.log(computableArray);
+              relativeSize.calculateRelativeSize(computableArray);
             }
           });
         }
