@@ -37,7 +37,13 @@ router.post('/upload', function(req, res) {
             if (err) {
               res.render('ErrorPage', {error: err});
             } else {
-              relativeSize.calculateRelativeSize(computableArray);
+              relativeSize.calculateRelativeSizes(computableArray, function(err, sizes){
+                if (err) {
+                  res.render('ErrorPage', {error: err});
+                } else {
+                  console.log(sizes);
+                }
+              });
             }
           });
         }
