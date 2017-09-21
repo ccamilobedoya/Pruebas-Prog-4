@@ -28,14 +28,12 @@ function saveFiles(req, results) {
 
   // Cada que encuentre un archivo lo guarda en el array
   form.on('file', function(name, file) {
-    if (file.type == 'application/octet-stream' ||
-        file.type == 'image/png' ||
-        file.type == 'image/jpeg' ||
-        file.type == 'image/jpg') {
+    if (file.type == 'text/csv') {
+      fileArray.push(file);
+      
+    } else {
       results('Extension del archivo ' + file.name + ' no es valido', null);
       return;
-    } else {
-      fileArray.push(file);
     }
   });
   // Si hay un error
